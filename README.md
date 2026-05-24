@@ -8,9 +8,8 @@ Built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **
 
 # Live Demo
 
-Deployed on:
-
-:contentReference[oaicite:0]{index=0}
+The project is live on:
+[ai-interview-generator](https://ai-interview-generator-alpha.vercel.app/)
 
 ---
 
@@ -270,25 +269,6 @@ Response:
 
 ---
 
-# Example Prompt
-
-```text
-You are an experienced hiring manager.
-
-Generate 3 thoughtful and role-specific interview questions
-for the following position:
-
-Role: Customer Success Manager
-
-Requirements:
-- Questions should assess real-world capability
-- Avoid generic questions
-- Make questions concise but insightful
-- Return ONLY a valid JSON array of strings
-```
-
----
-
 # Future Improvements
 
 If more time were available, potential improvements include:
@@ -307,9 +287,7 @@ If more time were available, potential improvements include:
 
 # Deployment
 
-The application is deployed using:
-
-:contentReference[oaicite:2]{index=2}
+The application is deployed to vercel
 
 Deployment flow:
 
