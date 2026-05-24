@@ -41,6 +41,7 @@ export default function InputForm() {
       }
 
       setQuestions(data.questions || []);
+      setJobTitle("");
     } catch (err) {
       console.error(err);
       setError("Failed to generate questions. Please try again.");
