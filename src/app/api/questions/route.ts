@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { generateInterviewQuestions } from "@/lib/ai";
+import { AppError } from "@/lib/error";
 
 /**
  * API route to generate interview questions based on a job title.
@@ -28,9 +29,20 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("API Error:", error);
 
+    if (error instanceof AppError) {
+      return NextResponse.json(
+        {
+          error: error.message,
+        },
+        {
+          status: error.statusCode,
+        },
+      );
+    }
+
     return NextResponse.json(
       {
-        error: "Failed to generate interview questions.",
+        error: "Something went wrong.",
       },
       {
         status: 500,
